@@ -133,6 +133,16 @@ without duplicating the markdown.
 4. Emits the list of files that were written via the `changed-files`
    output, ready to feed into the commit / PR action of your choice.
 
+## Toolchain
+
+| Pin | Value | Notes |
+| --- | --- | --- |
+| Action runtime | `node24` (set by `action.yml` `runs.using`) | Controlled by GitHub's available action-runtime ladder; `node26` is not yet an option. |
+| CLI installed at runtime | `cli-version` input (defaults to action version) | Bumped automatically per release. |
+
+The action source and `@nowline/cli` published to npm follow the broader **two-tier Node policy** documented canonically in
+[`lolay/nowline` § Toolchain & Supported Versions](https://github.com/lolay/nowline/blob/main/CONTRIBUTING.md#toolchain--supported-versions).
+
 ## Source
 
 This action's source lives in the

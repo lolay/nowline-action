@@ -1,4 +1,4 @@
-// @nowline/action 0.4.0 — bundled 2026-05-27T13:21:28.185Z
+// @nowline/action 0.4.1 — bundled 2026-05-27T23:49:36.765Z
 "use strict";
 var __create = Object.create;
 var __defProp = Object.defineProperty;
@@ -25712,7 +25712,7 @@ function info(message) {
 var package_default = {
   private: true,
   name: "@nowline/action",
-  version: "0.4.0",
+  version: "0.4.1",
   description: "GitHub Action that renders Nowline roadmap diagrams in CI \u2014 file and markdown modes.",
   license: "Apache-2.0",
   engines: {

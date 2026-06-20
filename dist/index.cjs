@@ -1,4 +1,4 @@
-// @nowline/action 0.8.4 — bundled 2026-06-19T19:15:50.760Z
+// @nowline/action 0.8.5 — bundled 2026-06-20T15:30:37.302Z
 "use strict";
 var __create = Object.create;
 var __defProp = Object.defineProperty;
@@ -7,7 +7,11 @@ var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __commonJS = (cb, mod) => function __require() {
-  return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+  try {
+    return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+  } catch (e) {
+    throw mod = 0, e;
+  }
 };
 var __export = (target, all2) => {
   for (var name in all2)
@@ -25712,7 +25716,7 @@ function info(message) {
 var package_default = {
   private: true,
   name: "@nowline/action",
-  version: "0.8.4",
+  version: "0.8.5",
   description: "GitHub Action that renders Nowline roadmap diagrams in CI \u2014 file and markdown modes.",
   license: "Apache-2.0",
   engines: {
@@ -25763,10 +25767,10 @@ var package_default = {
   devDependencies: {
     "@nowline/cli": "workspace:*",
     "@types/mdast": "^4.0.4",
-    "@types/node": "^25.9.1",
-    esbuild: "^0.28.0",
+    "@types/node": "^25.9.3",
+    esbuild: "^0.28.1",
     typescript: "^6.0.3",
-    vitest: "^4.1.7"
+    vitest: "^4.1.9"
   }
 };
 

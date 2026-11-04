@@ -37,6 +37,14 @@ inputs:
         description: "hide or show: how a business calendar's non-working days appear. Leave empty to follow the roadmap's own `default roadmap non-working:` key (then hide). Needs a CLI that supports --non-working; the flag is passed only when this is set."
         required: false
         default: ''
+    now:
+        description: "Date for the now-line: `-` hides it, a date pins it (YYYY-MM-DD, or a full ISO 8601 instant like 2026-01-15T09:00:00Z). Leave empty to draw today, which changes the image every day. Use `-` or a fixed date for images you commit, so an unchanged roadmap renders byte-identical output."
+        required: false
+        default: ''
+    args:
+        description: "Extra arguments appended to every `nowline` render call, for CLI options this action has no input for (e.g. `--width 1600`). Split on whitespace; single or double quotes group a value with spaces; nothing is expanded. Appended last, so a repeated flag here overrides the action's own."
+        required: false
+        default: ''
     cli-version:
         description: 'Version of @nowline/cli to install on the runner. Defaults to the action version (lock-step).'
         required: false
@@ -47,7 +55,9 @@ outputs:
     failed:
         description: 'Number of diagrams that failed to render'
     changed-files:
-        description: 'Newline-separated list of files written or modified by the action. Pair with stefanzweifel/git-auto-commit-action or peter-evans/create-pull-request to commit the result.'
+        description: 'Newline-separated list of files whose content the action changed, including files it created. A diagram that renders byte-identical to the file on disk is left untouched and not listed. Pair with stefanzweifel/git-auto-commit-action or peter-evans/create-pull-request to commit the result.'
+    changed:
+        description: "'true' if any file changed (changed-files is non-empty), else 'false'. Gate follow-up steps on this."
 
 runs:
     using: 'node24'

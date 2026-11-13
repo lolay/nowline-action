@@ -1,4 +1,4 @@
-// @nowline/action 0.12.1 — bundled 2026-11-04T04:04:11.691Z
+// @nowline/action 0.13.0 — bundled 2026-11-13T08:07:23.234Z
 "use strict";
 var __create = Object.create;
 var __defProp = Object.defineProperty;
@@ -26157,7 +26157,7 @@ var path5 = __toESM(require("node:path"), 1);
 var package_default = {
   private: true,
   name: "@nowline/action",
-  version: "0.12.1",
+  version: "0.13.0",
   description: "GitHub Action that renders Nowline roadmap diagrams in CI \u2014 file and markdown modes.",
   license: "Apache-2.0",
   engines: {
